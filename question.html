@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="question.css">
+</head>
+<body>
+    <video src="hearts.mp4" autoplay loop muted></video>
+    <div id="container">
+    <h1 id="text">Will you be my Valentine?🫶&#58;&#41;</h1>
+    <p id="img"></p>
+    <button id="yes" onclick="yesbtn()">Yes</button>
+    <button id="no"onclick="nobtn()">No</button>
+</div>
+
+<script>
+function yesbtn(){
+   
+
+    var h1 = document.getElementById("text");
+    h1.textContent = "Kneww it my Valentinee!!❤️⭐";
+    h1.style.color = "red";
+    var imgContainer = document.getElementById("img");
+        var img = document.createElement("img");
+        img.src = "ring.jpg"; 
+        img.alt = "Valentine Image";
+        img.style.width = "70%"; 
+        img.style.height = "60%";
+
+        imgContainer.appendChild(img);
+        document.getElementById("yes").style.display = "none";
+        document.getElementById("no").style.display = "none";
+}
+function nobtn() {
+    var nobtn = document.getElementById("no");
+    nobtn.style.position = "absolute";
+
+   let x = Math.random() * (window.innerWidth-100);
+    let y = Math.random() * (window.innerHeight-100);
+
+    nobtn.style.left = x + "px";
+    nobtn.style.top = y + "px";
+}
+
+
+
+
+</script>
+
+</body>
+</html>
