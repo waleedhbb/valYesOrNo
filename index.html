@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="question.css">
 </head>
 <body>
-    <video src="hearts.mp4" autoplay loop muted></video>
+    <video autoplay muted loop playsinline>
+        <source src="hearts.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div id="container">
-    <h1 id="text">Will you be my Valentine?🫶&#58;&#41;</h1>
+    <h1 id="text">Will You Be My Valentine?🫶&#58;&#41;</h1>
     <p id="img"></p>
     <button id="yes" onclick="yesbtn()">Yes</button>
-    <button id="no"onclick="nobtn()">No</button>
+    <button id="no"onmouseover="nobtn()">No</button>
 </div>
 
 <script>
@@ -21,7 +24,7 @@ function yesbtn(){
 
     var h1 = document.getElementById("text");
     h1.textContent = "Kneww it my Valentinee!!❤️⭐";
-    h1.style.color = "red";
+    h1.style.color = "#ff4d4d";
     var imgContainer = document.getElementById("img");
         var img = document.createElement("img");
         img.src = "ring.jpg"; 
